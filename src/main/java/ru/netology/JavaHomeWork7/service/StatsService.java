@@ -1,7 +1,7 @@
 package ru.netology.JavaHomeWork7.service;
 
 public class StatsService {
-    public int sumSales(long[] sales) {
+    public long sumSales(long[] sales) {
         int sum = 0;
         for (int i = 0; i < sales.length; i++) {
             sum = (int) (sum + sales[i]);
