@@ -11,7 +11,7 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expectedSum = 180;
-        long actual = (int) service.sumSales(sales);
+        long actual = service.sumSales(sales);
         Assertions.assertEquals(expectedSum, actual);
     }
 

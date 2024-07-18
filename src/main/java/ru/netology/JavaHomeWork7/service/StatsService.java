@@ -12,7 +12,7 @@ public class StatsService {
     public long averageNumber(long[] sales) {
         long average = 0;
         for (int i = 0; i < sales.length; i++) {
-            average = (int) (average + sales[i]);
+            average = average + sales[i];
         }
         return average / 12;
     }
@@ -43,20 +43,22 @@ public class StatsService {
         int belowMonth = 0;
         long averageSum = averageNumber(sales);
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < averageSum)
+            if (sales[i] < averageSum) {
                 belowMonth += 1;
+            }
         }
         return belowMonth;
     }
+
     public int aboveAverage(long[] sales) {
         int averageMonth = 0;
         long averageSum = averageNumber(sales);
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] > averageSum)
+            if (sales[i] > averageSum) {
                 averageMonth += 1;
+            }
         }
         return averageMonth;
-
 
 
     }
